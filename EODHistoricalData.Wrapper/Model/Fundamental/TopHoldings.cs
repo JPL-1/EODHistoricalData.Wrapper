@@ -1,4 +1,7 @@
-﻿namespace EOD.Model.Fundamental
+using Newtonsoft.Json.Converters;
+using Newtonsoft.Json;
+
+namespace EOD.Model.Fundamental
 {
     /// <summary>
     /// 
@@ -20,6 +23,7 @@
         /// <summary>
         /// 
         /// </summary>
+        [JsonConverter(typeof(Utils.PercentageConverter))]
         public double? Weight { get; set; }
     }
 }
