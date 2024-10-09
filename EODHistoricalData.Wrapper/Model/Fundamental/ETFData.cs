@@ -1,4 +1,5 @@
-﻿using System;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 namespace EOD.Model.Fundamental
@@ -71,6 +72,7 @@ namespace EOD.Model.Fundamental
         /// <summary>
         /// 
         /// </summary>
+        [JsonConverter(typeof(Utils.SafeNumConverter))]
         public decimal? Average_Mkt_Cap_Mil { get; set; }
         /// <summary>
         /// 
